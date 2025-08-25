@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="evo_studio logo">
+  <style>
+    :root {
+      --evo-ink:#0F4C81;   /* contornos/ventana */
+      --evo-green:#2DAC5A; /* hoja y hélice */
+    }
+    .ink{fill:var(--evo-ink)}
+    .green{fill:var(--evo-green)}
+    .stroke{fill:none;stroke:var(--evo-ink);stroke-width:24;stroke-linecap:round;stroke-linejoin:round}
+  </style>
+
+  <!--
+    Nota: SIN fondo (no hay <rect> full canvas) y SIN texto.
+    Se conserva la ventana con barra superior y la hoja/ADN.
+  -->
+
+  <!-- Ventana -->
+  <rect x="48" y="64" width="416" height="352" rx="28" class="stroke"/>
+  <!-- Barra superior -->
+  <rect x="48" y="64" width="416" height="56" rx="28" class="ink"/>
+  <circle cx="92" cy="92" r="8" fill="#fff" opacity=".9"/>
+  <circle cx="122" cy="92" r="8" fill="#fff" opacity=".6"/>
+  <circle cx="152" cy="92" r="8" fill="#fff" opacity=".4"/>
+
+  <!-- Planta-ADN (hélice con hojas) -->
+  <!-- hélice central -->
+  <path d="M256 148c-8 46-8 92 0 138" fill="none" stroke="var(--evo-green)" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- peldaños de hélice -->
+  <path d="M214 236c8-12 21-24 42-34 21 10 34 22 42 34h22c-12-24-34-45-64-60-30 15-52 36-64 60h22Z" class="green"/>
+  <path d="M256 388c-32-18-54-40-66-66h24c7 14 19 26 36 36 17-10 29-22 36-36h24c-12 26-34 48-66 66Z" class="green"/>
+
+  <!-- hojas -->
+  <path class="green" d="M256 164c6-22 18-39 38-52-4 24 2 45 18 64-22-5-41-2-56 8 0-6 0-12 0-20Z"/>
+  <path class="green" d="M256 164c-6-22-18-39-38-52 4 24-2 45-18 64 22-5 41-2 56 8 0-6 0-12 0-20Z"/>
+</svg>

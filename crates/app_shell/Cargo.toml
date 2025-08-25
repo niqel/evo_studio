@@ -1,0 +1,21 @@
+[package]
+name = "app_shell"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Vello sin extras innecesarios; solo backend wgpu.
+vello = { version = "0.5", default-features = false, features = ["wgpu"] }
+# Winit alineado con raw-window-handle 0.6 (lo que usa wgpu actual).
+winit = { version = "0.30", default-features = false, features = ["rwh_06"] }
+# Para bloquear el futuro de create_surface de forma simple.
+pollster = "0.4"
+kurbo = { version = "0.11", features = ["std"] }
+
+[profile.release]
+# Enfocado a binario pequeño (compila más lento).
+opt-level = "z"        # optimiza por tamaño
+lto = true             # LTO "fat" para tamaño (true == fat)
+codegen-units = 1      # menos unidades -> mejor optimización global
+panic = "abort"        # quita runtime de unwinding
+strip = "symbols"      # elimina símbolos del ejecutable (si tu toolchain lo soporta)

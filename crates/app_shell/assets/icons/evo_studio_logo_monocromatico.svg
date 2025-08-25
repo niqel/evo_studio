@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="evo_studio logo teal+green">
+  <style>
+    :root { --teal:#61dce9; --green:#2DAC5A; }
+    .stroke{fill:none;stroke:var(--teal);stroke-width:24;stroke-linecap:round;stroke-linejoin:round}
+    .ink{fill:var(--teal)} .leaf{fill:var(--green)}
+  </style>
+
+  <!-- Ventana -->
+  <rect x="48" y="64" width="416" height="352" rx="28" class="stroke"/>
+  <!-- Barra superior -->
+  <rect x="48" y="64" width="416" height="56" rx="28" class="ink"/>
+  <circle cx="92" cy="92" r="8" fill="#fff" opacity=".95"/>
+  <circle cx="122" cy="92" r="8" fill="#fff" opacity=".7"/>
+  <circle cx="152" cy="92" r="8" fill="#fff" opacity=".5"/>
+
+  <!-- Hélice central -->
+  <path d="M256 148c-8 46-8 92 0 138" fill="none" stroke="var(--green)" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- Peldaños/hojas -->
+  <path d="M214 236c8-12 21-24 42-34 21 10 34 22 42 34h22c-12-24-34-45-64-60-30 15-52 36-64 60h22Z" class="leaf"/>
+  <path d="M256 388c-32-18-54-40-66-66h24c7 14 19 26 36 36 17-10 29-22 36-36h24c-12 26-34 48-66 66Z" class="leaf"/>
+  <path d="M256 164c6-22 18-39 38-52-4 24 2 45 18 64-22-5-41-2-56 8 0-6 0-12 0-20Z" class="leaf"/>
+  <path d="M256 164c-6-22-18-39-38-52 4 24-2 45-18 64 22-5 41-2 56 8 0-6 0-12 0-20Z" class="leaf"/>
+</svg>

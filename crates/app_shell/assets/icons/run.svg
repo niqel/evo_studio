@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Run / Play">
+  <style>
+    :root { --teal:#61dce9; }
+  </style>
+  <defs>
+    <!-- Glow tipo neón -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g fill="none" stroke="var(--teal)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <!-- Círculo exterior -->
+    <circle cx="512" cy="512" r="360"/>
+    <!-- Triángulo de play -->
+    <path d="M440 360 L440 664 L680 512 Z"/>
+  </g>
+</svg>

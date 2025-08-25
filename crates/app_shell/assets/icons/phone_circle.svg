@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Teléfono">
+  <style>
+    :root { --teal:#61dce9; }
+  </style>
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g fill="none" stroke="var(--teal)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <!-- Aro exterior -->
+    <circle cx="512" cy="512" r="420"/>
+
+    <!-- Silueta de teléfono clásico -->
+    <path d="M380 300
+             Q 420 260 460 300
+             L 520 360
+             Q 540 380 520 400
+             L 480 440
+             Q 540 540 640 600
+             L 680 560
+             Q 700 540 720 560
+             L 780 620
+             Q 820 660 780 700
+             Q 720 760 620 720
+             Q 440 640 340 460
+             Q 300 380 360 320 Z"/>
+  </g>
+</svg>

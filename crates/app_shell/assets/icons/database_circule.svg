@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Base de datos">
+  <style>
+    :root { --teal:#61dce9; }
+  </style>
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g fill="none" stroke="var(--teal)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <!-- Aro exterior -->
+    <circle cx="512" cy="512" r="420"/>
+
+    <!-- Tapa superior del cilindro -->
+    <ellipse cx="512" cy="340" rx="210" ry="92"/>
+
+    <!-- Cuerpo (contorno vertical) -->
+    <path d="M302 340 V620"/>
+    <path d="M722 340 V620"/>
+
+    <!-- Separadores (pilas) con elipses huecas -->
+    <ellipse cx="512" cy="480" rx="210" ry="92"/>
+    <ellipse cx="512" cy="620" rx="210" ry="92"/>
+  </g>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="evo_studio logo neon">
+  <style>
+    :root { --teal:#61dce9; --green:#2dac5a; --ink:#0b0c0d; }
+    text { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
+  </style>
+
+  <defs>
+    <!-- Fondo: viñeta radial -->
+    <radialGradient id="bgRad" cx="50%" cy="35%" r="75%">
+      <stop offset="0%"  stop-color="#0d0f10"/>
+      <stop offset="55%" stop-color="#0a0c0d"/>
+      <stop offset="100%" stop-color="#000"/>
+    </radialGradient>
+
+    <!-- Glow fuerte (neón) reutilizable -->
+    <filter id="glow-teal" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-green" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="28" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow suave para duplicar capas (más “bloom”) -->
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo con viñeta -->
+  <rect width="1024" height="1024" fill="url(#bgRad)"/>
+
+  <!-- Grupo ventana (estilo “studio”) con halo teal -->
+  <g filter="url(#glow-teal)">
+    <!-- Marco exterior redondeado -->
+    <rect x="220" y="260" width="584" height="360" rx="38" fill="var(--teal)" opacity="0.9"/>
+    <!-- Área interior (pantalla) para dar sensación de UI -->
+    <rect x="300" y="320" width="424" height="240" rx="18" fill="var(--ink)" opacity="0.25" filter="url(#soft)"/>
+    <!-- Barra lateral interior (como panel izquierdo de una app) -->
+    <rect x="300" y="320" width="96" height="240" rx="14" fill="var(--ink)" opacity="0.35"/>
+    <!-- Separador fino vertical -->
+    <rect x="398" y="320" width="2" height="240" fill="#ffffff" opacity="0.12"/>
+  </g>
+
+  <!-- Planta / ADN con brillo verde -->
+  <g filter="url(#glow-green)">
+    <!-- Tallos en hélice -->
+    <path d="M512 184
+             C 504 226 504 268 512 310
+             C 520 352 520 394 512 436
+             C 504 478 504 520 512 562"
+          fill="none" stroke="var(--green)" stroke-width="22" stroke-linecap="round"/>
+
+    <!-- Peldaños de la hélice (dos curvas enfrentadas) -->
+    <path d="M436 292 C 472 268 512 268 548 292" fill="none" stroke="var(--green)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M436 372 C 472 348 512 348 548 372" fill="none" stroke="var(--green)" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Hoja izquierda -->
+    <path d="M468 184
+             C 430 168 402 140 388 110
+             C 392 144 386 176 368 206
+             C 402 196 432 198 468 214 Z"
+          fill="var(--green)"/>
+
+    <!-- Hoja derecha -->
+    <path d="M556 184
+             C 594 168 622 140 636 110
+             C 632 144 638 176 656 206
+             C 622 196 592 198 556 214 Z"
+          fill="var(--green)"/>
+  </g>
+
+  <!-- Texto con neón teal -->
+  <g filter="url(#glow-teal)">
+    <text x="512" y="840" text-anchor="middle" font-size="104" fill="var(--teal)" opacity="0.92">evo_studio</text>
+  </g>
+</svg>

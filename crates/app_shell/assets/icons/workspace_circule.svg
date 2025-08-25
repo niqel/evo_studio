@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Workspace">
+  <style>
+    :root { --teal:#61dce9; }
+  </style>
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g fill="none" stroke="var(--teal)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <!-- Aro exterior -->
+    <circle cx="512" cy="512" r="420"/>
+
+    <!-- Asa del maletín (handle) -->
+    <rect x="392" y="300" width="240" height="70" rx="30"/>
+
+    <!-- Cuerpo del maletín -->
+    <rect x="280" y="370" width="464" height="300" rx="40"/>
+
+    <!-- División central (simboliza varios proyectos) -->
+    <line x1="512" y1="370" x2="512" y2="670"/>
+
+    <!-- División horizontal -->
+    <line x1="280" y1="520" x2="744" y2="520"/>
+  </g>
+</svg>

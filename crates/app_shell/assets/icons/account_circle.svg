@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Cuenta / Usuario">
+  <style>
+    :root { --teal:#61dce9; }
+  </style>
+  <defs>
+    <!-- Efecto neón opcional -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Contornos huecos -->
+  <g fill="none" stroke="var(--teal)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <!-- Aro exterior -->
+    <circle cx="512" cy="512" r="360"/>
+
+    <!-- Cabeza (círculo) -->
+    <circle cx="512" cy="420" r="110"/>
+
+    <!-- Hombros/pecho (arco) -->
+    <!-- Un arco ancho que simula los hombros; ajustado para que no toque el aro -->
+    <path d="M276 706
+             C 340 620, 440 584, 512 584
+             C 584 584, 684 620, 748 706" />
+  </g>
+</svg>

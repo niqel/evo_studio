@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Configuración circular">
+  <style>
+    :root { --teal:#61dce9; }
+  </style>
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g fill="none" stroke="var(--teal)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <!-- Aro exterior -->
+    <circle cx="512" cy="512" r="420"/>
+
+    <!-- Engrane central (simplificado con aro + dientes) -->
+    <circle cx="512" cy="512" r="140"/>
+    <path d="M512 184 l40 -92 a16 16 0 0 1 28 0 l40 92 a300 300 0 0 1 84 34 l90 -38 a16 16 0 0 1 22 22 l-38 90 a300 300 0 0 1 34 84 l92 40 a16 16 0 0 1 0 28 l-92 40 a300 300 0 0 1 -34 84 l38 90 a16 16 0 0 1 -22 22 l-90 -38 a300 300 0 0 1 -84 34 l-40 92 a16 16 0 0 1 -28 0 l-40 -92 a300 300 0 0 1 -84 -34 l-90 38 a16 16 0 0 1 -22 -22 l38 -90 a300 300 0 0 1 -34 -84 l-92 -40 a16 16 0 0 1 0 -28 l92 -40 a300 300 0 0 1 34 -84 l-38 -90 a16 16 0 0 1 22 -22 l90 38 a300 300 0 0 1 84 -34 z"/>
+  </g>
+</svg>
