@@ -1,11 +1,7 @@
-// C:\repos\evo_studio\crates\app_shell\src\lib.rs
+// No expongas el módulo: privado hacia afuera
+mod runner;
+mod renderer;
 
-pub mod app;     // dueño del “modelo + update + puente con winit”
-pub mod scene;   // puro: layout, view, tipos UI
-pub mod sketcher; // <-- 💡 NECESARIO para que crate::sketcher exista
-pub mod text;
-
-pub use crate::app::App;
-
-// (opcional) re-exportar para uso desde otros módulos/bin
-// pub use sketcher::{Sketcher, SketchInput, SketchInputError, SketchOutput, DrawOp, emit_scene};
+// Reexporta SOLO el tipo en la raíz → app_shell::Runner
+pub use runner::Runner;
+pub use renderer::Renderer;
